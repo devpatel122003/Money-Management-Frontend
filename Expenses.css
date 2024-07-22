@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f5f7fa;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Balance Container */
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.balance-section {
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    transition: transform 0.2s;
+}
+
+.balance-section:hover {
+    transform: scale(1.05);
+}
+
+/* Section */
+.section {
+    margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.2s;
+}
+
+.input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.button-expense {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button-expense:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Expense Category */
+.category-container {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.category-container:hover {
+    background-color: #f2f2f2;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-header h3 {
+    margin: 0;
+}
+
+.category-details {
+    margin-top: 10px;
+}
+
+.category-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-details ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.category-details ul li:last-child {
+    border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .balance-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .balance-section {
+        flex: 0 0 auto;
+        margin: 0;
+        min-width: 150px;
+    }
+
+    .balance-section:hover {
+        transform: scale(1);
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input {
+        max-width: 93%;
+    }
+
+    .button-expense {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .balance-section {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .button-expense {
+        padding: 10px 15px;
+    }
+
+    .category-header h3 {
+        font-size: 16px;
+    }
+}
